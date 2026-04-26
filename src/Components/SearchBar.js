@@ -131,7 +131,7 @@ const SearchBar = ({ elements, onSearch, onSelectElement }) => {
           ref={inputRef}
           id="element-search-input"
           type="text"
-          placeholder="Search by name, symbol, or atomic number..."
+          placeholder="Press (/) to search by name, symbol, or atomic number..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
