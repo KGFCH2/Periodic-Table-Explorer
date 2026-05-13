@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PeriodicTable from "./Components/PeriodicTable";
 import Trends from "./Components/Trends/Trends";
-import CompareElements from "./Components/compareElements";
+import CompareElements from "./Components/CompareElements";
 import ThemeToggle from "./Components/ThemeToggle/ThemeToggle";
 import Assistant from "./Components/Assistant/Assistant";
 import QuizMode from "./Components/QuizMode";
