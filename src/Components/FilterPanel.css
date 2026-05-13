@@ -24,13 +24,13 @@
   font-family: "Inter", sans-serif;
   cursor: pointer;
   transition: all 0.25s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .filter-toggle-btn:hover {
   background: var(--glass-bg-hover);
-  border-color: rgba(138, 92, 246, 0.4);
+  border-color: var(--primary-color);
   color: var(--text-color);
 }
 
@@ -38,7 +38,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   font-size: 10px;
   font-weight: 700;
@@ -60,7 +60,8 @@
 .filter-clear-all {
   background: none;
   border: none;
-  color: rgba(239, 68, 68, 0.8);
+  color: var(--danger-color);
+  opacity: 0.8;
   font-size: 12px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
@@ -72,7 +73,7 @@
 
 .filter-clear-all:hover {
   background: rgba(239, 68, 68, 0.12);
-  color: #ef4444;
+  opacity: 1;
 }
 
 /* ===== Filter Body ===== */
@@ -80,14 +81,15 @@
   margin-top: 12px;
   padding: 16px;
   background: var(--panel-bg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   animation: filterSlideIn 0.25s ease-out;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 @keyframes filterSlideIn {
@@ -146,39 +148,39 @@
 
 .filter-chip:hover {
   background: var(--glass-bg-hover);
-  border-color: rgba(138, 92, 246, 0.3);
+  border-color: var(--primary-color);
   color: var(--text-color);
 }
 
 /* Active chip states */
 .filter-chip.active.chip-all {
-  background: rgba(138, 92, 246, 0.15);
-  border-color: rgba(138, 92, 246, 0.4);
-  color: #a78bfa;
+  background: var(--primary-glow);
+  border-color: var(--primary-color);
+  color: #ffffff;
 }
 
 .filter-chip.active.chip-metal {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: rgba(245, 158, 11, 0.4);
-  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.2);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .filter-chip.active.chip-nonmetal {
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.4);
-  color: #34d399;
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+  color: #10b981;
 }
 
 .filter-chip.active.chip-metalloid {
-  background: rgba(6, 182, 212, 0.15);
-  border-color: rgba(6, 182, 212, 0.4);
-  color: #22d3ee;
+  background: rgba(6, 182, 212, 0.2);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .filter-chip.active.chip-noble-gas {
-  background: rgba(139, 92, 246, 0.15);
-  border-color: rgba(139, 92, 246, 0.4);
-  color: #a78bfa;
+  background: var(--primary-glow);
+  border-color: var(--primary-color);
+  color: #ffffff;
 }
 
 /* ===== Number Chips (Period / Group) ===== */
@@ -207,15 +209,15 @@
 
 .filter-num-chip:hover {
   background: var(--glass-bg-hover);
-  border-color: rgba(138, 92, 246, 0.3);
+  border-color: var(--primary-color);
   color: var(--text-color);
 }
 
 .filter-num-chip.active {
-  background: rgba(138, 92, 246, 0.2);
-  border-color: rgba(138, 92, 246, 0.5);
-  color: #a78bfa;
-  box-shadow: 0 0 12px rgba(138, 92, 246, 0.15);
+  background: var(--primary-glow);
+  border-color: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--primary-glow);
 }
 
 /* ===== Responsive ===== */
