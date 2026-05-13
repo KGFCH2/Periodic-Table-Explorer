@@ -15,14 +15,14 @@
   padding: 0 16px;
   height: 48px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .search-input-wrapper:focus-within {
-  border-color: rgba(138, 92, 246, 0.6);
-  box-shadow: 0 0 0 3px rgba(138, 92, 246, 0.15),
-    0 8px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-glow),
+    var(--glass-shadow);
   background: var(--glass-bg-hover);
 }
 
@@ -34,7 +34,7 @@
 }
 
 .search-input-wrapper:focus-within .search-icon {
-  color: rgba(138, 92, 246, 0.8);
+  color: var(--primary-color);
 }
 
 .search-input-wrapper input {
@@ -71,7 +71,7 @@
 
 .search-clear-btn:hover {
   background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
+  color: var(--danger-color);
 }
 
 /* ===== Suggestions Dropdown ===== */
@@ -84,12 +84,11 @@
   margin: 0;
   padding: 6px;
   background: var(--panel-bg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
   border-radius: 14px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   animation: suggestionsSlideIn 0.2s ease-out;
   overflow: hidden;
 }
@@ -141,16 +140,16 @@
 
 /* Category color indicators */
 .suggestion-item.cat-metal::before {
-  background: linear-gradient(180deg, #f59e0b, #d97706);
+  background: var(--accent-color);
 }
 .suggestion-item.cat-nonmetal::before {
-  background: linear-gradient(180deg, #10b981, #059669);
+  background: #10b981;
 }
 .suggestion-item.cat-noble::before {
-  background: linear-gradient(180deg, #8b5cf6, #7c3aed);
+  background: var(--primary-color);
 }
 .suggestion-item.cat-metalloid::before {
-  background: linear-gradient(180deg, #06b6d4, #0891b2);
+  background: var(--secondary-color);
 }
 
 .suggestion-number {
