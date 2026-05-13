@@ -14,6 +14,18 @@
   font-family: "Inter", sans-serif;
 }
 
+.compare-section select,
+.compare-section option {
+  background: var(--panel-bg);
+  color: var(--text-color);
+}
+
+.compare-section option:disabled,
+.compare-section option:checked {
+  background: var(--glass-bg-hover);
+  color: var(--text-color);
+}
+
 .compare-container {
   display: flex;
   justify-content: center;
