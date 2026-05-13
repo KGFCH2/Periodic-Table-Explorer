@@ -78,4 +78,3 @@ If you're an NSOC contributor, please check the [Contributing Guidelines](CONTRI
    yarn start
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
-
