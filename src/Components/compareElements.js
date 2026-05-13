@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import elementsData from "../Data/elementsData"; // adjust path if needed
-import "./compareElements.css";
+import "./CompareElements.css";
 
 function CompareElements() {
   const [el1, setEl1] = useState("");
