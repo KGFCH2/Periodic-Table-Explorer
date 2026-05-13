@@ -66,4 +66,3 @@ We love contributions! Whether it's a bug fix, a new feature, or documentation i
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
