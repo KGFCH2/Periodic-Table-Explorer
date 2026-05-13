@@ -32,6 +32,7 @@
   --glass-bg-hover: rgba(255, 255, 255, 0.08);
   --text-muted: rgba(255, 255, 255, 0.5);
   --panel-bg: rgba(15, 23, 42, 0.95);
+  color-scheme: dark;
 }
 
 * {
@@ -45,6 +46,7 @@ body {
   background: var(--bg-gradient);
   min-height: 100vh;
   color: var(--text-color);
+  color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
