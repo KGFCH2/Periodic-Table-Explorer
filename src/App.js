@@ -5,10 +5,17 @@ import CompareElements from "./Components/compareElements";
 import ThemeToggle from "./Components/ThemeToggle/ThemeToggle";
 import Assistant from "./Components/Assistant/Assistant";
 import QuizMode from "./Components/QuizMode";
+import Footer from "./Components/Footer/Footer";
+import DocsPortal from "./Components/Footer/DocsPortal";
 
 
 function App() {
   const [quizOpen, setQuizOpen] = useState(false);
+  const [docsView, setDocsView] = useState({ open: false, type: 'docs' });
+
+  const handleOpenDocs = (type) => {
+    setDocsView({ open: true, type });
+  };
 
   
   return (
@@ -40,7 +47,14 @@ function App() {
       <Trends />
       <CompareElements />
       <Assistant />
+      <Footer onOpenDocs={handleOpenDocs} />
       {quizOpen && <QuizMode onClose={() => setQuizOpen(false)} />}
+      {docsView.open && (
+        <DocsPortal 
+          type={docsView.type} 
+          onClose={() => setDocsView({ ...docsView, open: false })} 
+        />
+      )}
     </div>
   );
 }
