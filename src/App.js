@@ -7,6 +7,8 @@ import Assistant from "./Components/Assistant/Assistant";
 import QuizMode from "./Components/QuizMode";
 
 
+import { FlaskConical } from "lucide-react";
+
 function App() {
   const [quizOpen, setQuizOpen] = useState(false);
 
@@ -29,9 +31,12 @@ function App() {
               cursor: 'pointer',
               fontFamily: 'Inter, sans-serif',
               transition: 'all 0.2s ease',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px'
             }}
             title="Open Quiz Mode">
-            ⚗️ Quiz Mode
+            <FlaskConical size={18} /> Quiz Mode
           </button>
           <ThemeToggle />
         </div>
