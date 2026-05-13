@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Github, Twitter, Mail, Shield, FileText, BookOpen, HelpCircle } from 'lucide-react';
+import { Globe, Send, Mail, Shield, FileText, BookOpen, HelpCircle } from 'lucide-react';
 
 const Footer = ({ onOpenDocs }) => {
   return (
@@ -11,10 +11,10 @@ const Footer = ({ onOpenDocs }) => {
           <p>The most comprehensive interactive periodic table for students and researchers.</p>
           <div className="social-links">
             <a href="https://github.com/KGFCH2/Periodic-Table-Explorer" target="_blank" rel="noopener noreferrer" title="GitHub">
-              <Github size={20} />
+              <Globe size={20} />
             </a>
-            <a href="#" title="Twitter">
-              <Twitter size={20} />
+            <a href="#" title="Social">
+              <Send size={20} />
             </a>
             <a href="mailto:support@periodictable.com" title="Email Support">
               <Mail size={20} />
