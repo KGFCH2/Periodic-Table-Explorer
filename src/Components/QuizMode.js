@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
+import { Beaker, Flame, CheckCircle, XCircle } from "lucide-react";
 import elementsData from "../Data/elementsData";
 import "./QuizMode.css";
 
@@ -109,7 +110,7 @@ const QuizMode = ({ onClose }) => {
       <div className="quiz-modal" onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="quiz-header">
-          <h2 className="quiz-title">⚗️ Quiz Mode</h2>
+          <h2 className="quiz-title"><Beaker size={24} className="quiz-title-icon" /> Quiz Mode</h2>
           <button className="quiz-close-btn" onClick={onClose} aria-label="Close quiz">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 6 6 18" /><path d="m6 6 12 12" />
@@ -129,7 +130,7 @@ const QuizMode = ({ onClose }) => {
           </div>
           <div className="quiz-score-item">
             <span className="quiz-score-label">Streak</span>
-            <span className="quiz-score-value quiz-score-streak">🔥 {streak}</span>
+            <span className="quiz-score-value quiz-score-streak"><Flame size={16} className="quiz-streak-icon" /> {streak}</span>
           </div>
           <div className="quiz-score-item">
             <span className="quiz-score-label">Best</span>
@@ -173,7 +174,15 @@ const QuizMode = ({ onClose }) => {
         {/* Feedback + Next */}
         {isAnswered && (
           <div className={`quiz-feedback ${isCorrect ? "feedback-correct" : "feedback-wrong"}`}>
-            {isCorrect ? "✅ Correct!" : `❌ The answer was "${question.correctAnswer}"`}
+            {isCorrect ? (
+              <>
+                <CheckCircle size={18} className="feedback-icon" /> Correct!
+              </>
+            ) : (
+              <>
+                <XCircle size={18} className="feedback-icon" /> The answer was "{question.correctAnswer}"
+              </>
+            )}
           </div>
         )}
 

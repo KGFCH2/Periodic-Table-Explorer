@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Globe, Send, Mail, Shield, FileText, BookOpen, HelpCircle } from 'lucide-react';
+import { Globe, Shield, FileText, BookOpen, HelpCircle } from 'lucide-react';
 
 const Footer = ({ onOpenDocs }) => {
   return (

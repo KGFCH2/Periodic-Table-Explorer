@@ -94,7 +94,7 @@ position: relative;
   justify-content: center;
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  color: #0f172a;
+  color: var(--text-color);
   font-size: 14px;
   width: 100%;
   aspect-ratio: 1;
@@ -277,7 +277,7 @@ position: relative;
   border-radius: 10px;
   border: 1px solid rgba(59, 130, 246, 0.35);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(99, 102, 241, 0.22));
-  color: #dbeafe;
+  color: var(--text-color);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -288,7 +288,7 @@ position: relative;
 .details-gallery-btn:hover {
   border-color: rgba(96, 165, 250, 0.55);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.32), rgba(99, 102, 241, 0.32));
-  color: #eff6ff;
+  color: var(--text-color);
   transform: translateY(-1px);
 }
 
@@ -301,7 +301,7 @@ position: relative;
   border-radius: 10px;
   border: 1px solid rgba(167, 139, 250, 0.35);
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(167, 139, 250, 0.22));
-  color: #ddd6fe;
+  color: var(--text-color);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -312,7 +312,7 @@ position: relative;
 .details-wiki-btn:hover {
   border-color: rgba(167, 139, 250, 0.55);
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.32), rgba(167, 139, 250, 0.32));
-  color: #ede9fe;
+  color: var(--text-color);
   transform: translateY(-1px);
 }
 
@@ -352,18 +352,18 @@ position: relative;
 
 .element-details {
   position: relative;
-  background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 28px;
   width: 100%;
   max-width: 420px;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2),
+    0 0 0 1px var(--border-color);
   animation: detailsSlideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  color: #e2e8f0;
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
   scrollbar-width: thin;
   scrollbar-color: rgba(167, 139, 250, 0.4) transparent;
@@ -399,7 +399,7 @@ position: relative;
   top: 16px;
   right: 16px;
   background: var(--glass-bg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   border-radius: 10px;
   width: 34px;
   height: 34px;
@@ -442,7 +442,7 @@ position: relative;
   margin: 0 0 4px;
   font-size: 22px;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-color);
   letter-spacing: -0.01em;
 }
 
@@ -486,7 +486,7 @@ position: relative;
 .detail-value {
   font-size: 15px;
   font-weight: 600;
-  color: #e2e8f0;
+  color: var(--text-color);
 }
 
 .detail-value-mono {
