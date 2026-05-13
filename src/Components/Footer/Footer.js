@@ -10,14 +10,8 @@ const Footer = ({ onOpenDocs }) => {
           <h3>Periodic Table Explorer</h3>
           <p>The most comprehensive interactive periodic table for students and researchers.</p>
           <div className="social-links">
-            <a href="https://github.com/KGFCH2/Periodic-Table-Explorer" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <a href="https://github.com/shwetap3000/Periodic-Table-Explorer" target="_blank" rel="noopener noreferrer" title="GitHub">
               <Globe size={20} />
-            </a>
-            <a href="#" title="Social">
-              <Send size={20} />
-            </a>
-            <a href="mailto:support@periodictable.com" title="Email Support">
-              <Mail size={20} />
             </a>
           </div>
         </div>
