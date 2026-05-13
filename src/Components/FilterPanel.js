@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Atom, Zap, Wind, Droplet, Sparkles } from "lucide-react";
 import "./FilterPanel.css";
 
 // Classification helpers
@@ -36,11 +37,11 @@ const FilterPanel = ({ onFilterChange }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const typeFilters = [
-    { key: "all", label: "All", icon: "⚛️" },
-    { key: "metal", label: "Metals", icon: "🔩" },
-    { key: "nonmetal", label: "Non-metals", icon: "💨" },
-    { key: "metalloid", label: "Metalloids", icon: "⚡" },
-    { key: "noble-gas", label: "Noble Gases", icon: "✨" },
+    { key: "all", label: "All", IconComponent: Atom },
+    { key: "metal", label: "Metals", IconComponent: Zap },
+    { key: "nonmetal", label: "Non-metals", IconComponent: Wind },
+    { key: "metalloid", label: "Metalloids", IconComponent: Droplet },
+    { key: "noble-gas", label: "Noble Gases", IconComponent: Sparkles },
   ];
 
   const periods = [1, 2, 3, 4, 5, 6, 7];
@@ -137,7 +138,7 @@ const FilterPanel = ({ onFilterChange }) => {
                   onClick={() => handleTypeChange(f.key)}
                   id={`filter-type-${f.key}`}
                 >
-                  <span className="chip-icon">{f.icon}</span>
+                  <f.IconComponent size={16} className="chip-icon" />
                   <span>{f.label}</span>
                 </button>
               ))}
