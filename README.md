@@ -63,7 +63,8 @@ This project is a featured part of the **Nexus Spring of Code 2026**. We welcome
 
 We love contributions! Whether it's a bug fix, a new feature, or documentation improvements, please read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
+We love contributions! Whether it's a bug fix, a new feature, or documentation improvements, please read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
