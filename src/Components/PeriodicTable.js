@@ -354,10 +354,11 @@ const PeriodicTable = () => {
                   camera-controls
                   ar
                   style={{ width: '100%', height: '250px', outline: 'none' }}
-                ></model-viewer>
+                >                </model-viewer>
                 <div className="model-viewer-hint">Drag to rotate • Scroll to zoom • AR enabled</div>
               </div>
             )}
+
             {/* Element Image */}
             {selectedElement.image?.url ? (
               <div className="details-image-wrapper">
