@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from "react";
+import { Atom, Zap, Wind, Droplet, Sparkles } from "lucide-react";
 import "./FilterPanel.css";
+import { Atom, Wind, Zap, Sparkles, Component, Filter, ChevronDown } from "lucide-react";
 
 // Classification helpers
 const METAL_CATEGORIES = [
@@ -36,11 +38,11 @@ const FilterPanel = ({ onFilterChange }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const typeFilters = [
-    { key: "all", label: "All", icon: "⚛️" },
-    { key: "metal", label: "Metals", icon: "🔩" },
-    { key: "nonmetal", label: "Non-metals", icon: "💨" },
-    { key: "metalloid", label: "Metalloids", icon: "⚡" },
-    { key: "noble-gas", label: "Noble Gases", icon: "✨" },
+    { key: "all", label: "All", icon: <Atom size={14} /> },
+    { key: "metal", label: "Metals", icon: <Component size={14} /> },
+    { key: "nonmetal", label: "Non-metals", icon: <Wind size={14} /> },
+    { key: "metalloid", label: "Metalloids", icon: <Zap size={14} /> },
+    { key: "noble-gas", label: "Noble Gases", icon: <Sparkles size={14} /> },
   ];
 
   const periods = [1, 2, 3, 4, 5, 6, 7];
@@ -93,28 +95,18 @@ const FilterPanel = ({ onFilterChange }) => {
           onClick={() => setIsExpanded(!isExpanded)}
           id="filter-toggle-btn"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-          </svg>
+          <Filter size={16} />
           <span>Filters</span>
           {hasActiveFilters && <span className="filter-badge">{
             (activeType !== "all" ? 1 : 0) +
             (activePeriod !== "all" ? 1 : 0) +
             (activeGroup !== "all" ? 1 : 0)
           }</span>}
-          <svg
+          <ChevronDown
             className={`filter-chevron ${isExpanded ? "rotated" : ""}`}
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
+            size={14}
+            strokeWidth={2.5}
+          />
         </button>
 
         {hasActiveFilters && (
@@ -137,7 +129,7 @@ const FilterPanel = ({ onFilterChange }) => {
                   onClick={() => handleTypeChange(f.key)}
                   id={`filter-type-${f.key}`}
                 >
-                  <span className="chip-icon">{f.icon}</span>
+                  <f.IconComponent size={16} className="chip-icon" />
                   <span>{f.label}</span>
                 </button>
               ))}

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./SearchBar.css";
+import { Search, X } from "lucide-react";
 
 const SearchBar = ({ elements, onSearch, onSelectElement }) => {
   const [query, setQuery] = useState("");
@@ -113,20 +114,7 @@ const SearchBar = ({ elements, onSearch, onSelectElement }) => {
   return (
     <div className="search-bar-container" id="search-bar">
       <div className="search-input-wrapper">
-        <svg
-          className="search-icon"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="11" cy="11" r="8" />
-          <path d="m21 21-4.35-4.35" />
-        </svg>
+        <Search className="search-icon" size={18} strokeWidth={2.5} />
         <input
           ref={inputRef}
           id="element-search-input"
@@ -145,10 +133,7 @@ const SearchBar = ({ elements, onSearch, onSelectElement }) => {
             aria-label="Clear search"
             id="search-clear-btn"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
+            <X size={14} strokeWidth={2.5} />
           </button>
         )}
       </div>
