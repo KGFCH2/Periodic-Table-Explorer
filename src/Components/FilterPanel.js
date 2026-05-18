@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Atom, Zap, Wind, Droplet, Sparkles } from "lucide-react";
 import "./FilterPanel.css";
 import { Atom, Wind, Zap, Sparkles, Component, Filter, ChevronDown } from "lucide-react";
 
@@ -128,7 +129,7 @@ const FilterPanel = ({ onFilterChange }) => {
                   onClick={() => handleTypeChange(f.key)}
                   id={`filter-type-${f.key}`}
                 >
-                  <span className="chip-icon">{f.icon}</span>
+                  <f.IconComponent size={16} className="chip-icon" />
                   <span>{f.label}</span>
                 </button>
               ))}

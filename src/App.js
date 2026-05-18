@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Beaker } from "lucide-react";
 import PeriodicTable from "./Components/PeriodicTable";
 import Trends from "./Components/Trends/Trends";
 import CompareElements from "./Components/CompareElements";
@@ -44,9 +45,9 @@ function App() {
             style={{
               padding: '8px 16px',
               borderRadius: '10px',
-              border: '1px solid rgba(167, 139, 250, 0.35)',
-              background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(167, 139, 250, 0.22))',
-              color: '#ddd6fe',
+              border: '1px solid var(--glass-border)',
+              background: 'var(--glass-bg)',
+              color: 'var(--text-color)',
               fontSize: '14px',
               fontWeight: '600',
               cursor: 'pointer',
