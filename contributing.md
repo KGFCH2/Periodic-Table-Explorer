@@ -63,7 +63,15 @@ To maintain consistency across the codebase, adhere to the following standards:
 
 ### CSS and Styling
 - The project primarily relies on standard CSS with dynamic CSS variables.
-- We support both Light and Dark themes. Whenever you introduce new components, avoid hardcoding colors. Instead, utilize the global CSS variables defined in `/src/index.css` (e.g., `var(--bg-color)`, `var(--text-color)`, `var(--glass-bg)`).
+- **Glassmorphism**: We use a glassmorphism design language. Use `var(--glass-bg)`, `var(--glass-border)`, and `var(--glass-blur)` for consistent panel and card aesthetics.
+- **Theme Support**: We support both Light and Dark themes. Whenever you introduce new components, avoid hardcoding colors. Instead, utilize the global CSS variables defined in `/src/index.css`.
+- **Responsive Design**: Ensure all components are mobile-friendly. Use CSS Grid and Flexbox for fluid layouts.
+
+### Design Guidelines
+- **Color Palette**: Use the curated primary (`#8b5cf6`), secondary (`#06b6d4`), and accent (`#f59e0b`) colors from the design tokens.
+- **Typography**: Use the 'Inter' font family. Ensure proper weight usage (400 for body, 700+ for headers).
+- **Accessibility**: Use semantic HTML (e.g., `<header>`, `<main>`, `<section>`). Provide `aria-label` for interactive elements and ensure color contrast ratios meet WCAG AA standards.
+- **Micro-animations**: Use subtle transitions (e.g., `0.3s cubic-bezier(0.4, 0, 0.2, 1)`) for hover states and modal entries to make the app feel alive.
 
 ### AI Assistant (Gemini)
 - If you modify the Chemistry Assistant behavior, ensure changes align with the strict chemistry-only prompt directives. The assistant must remain an educational tool focused strictly on the periodic table.

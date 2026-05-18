@@ -1,14 +1,14 @@
 .trends-container {
   margin: 3rem auto;
   max-width: 1100px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: #f8fafc;
+  color: var(--text-color);
   font-family: inherit;
   transition: all 0.3s ease;
 }
@@ -29,7 +29,7 @@
 }
 
 .trends-subtitle {
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
@@ -40,9 +40,9 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--glass-bg-hover);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
 }
 
 .control-group {
@@ -56,30 +56,43 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #cbd5e1;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
 .trends-select {
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  background: rgba(30, 41, 59, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  color: #f1f5f9;
+  background: var(--panel-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
   font-size: 0.95rem;
   outline: none;
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200.svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200.svg' fill='none' viewBox='0 0 24 24' stroke='%23999'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.trends-select,
+.trends-select option {
+  background: var(--panel-bg);
+  color: var(--text-color);
+}
+
+.trends-select option:disabled,
+.trends-select option:checked {
+  background: var(--glass-bg-hover);
+  color: var(--text-color);
 }
 
 .trends-select:hover {
   border-color: rgba(56, 189, 248, 0.5);
-  background-color: rgba(30, 41, 59, 1);
+  background-color: var(--glass-bg-hover);
 }
 
 .trends-select:focus {
@@ -88,10 +101,10 @@
 }
 
 .chart-wrapper {
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--glass-bg-hover);
   border-radius: 12px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
   position: relative;
   min-height: 400px;
 }

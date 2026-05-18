@@ -186,7 +186,7 @@ const PeriodicTable = () => {
   return (
     <div className="periodic-table-wrapper">
       {/* Controls Bar */}
-      <div className="controls-bar">
+      <div className="controls-bar" role="search" aria-label="Table controls">
         <SearchBar
           elements={elementsData}
           onSearch={handleSearch}
@@ -195,10 +195,10 @@ const PeriodicTable = () => {
         <FilterPanel onFilterChange={handleFilterChange} />
 
         {hasActiveFilters && (
-          <div className="results-count">
+          <div className="results-count" aria-live="polite">
             <span className="results-count-number">{visibleCount}</span>
             <span className="results-count-label">
-              of {elementsData.length} elements
+              of {elementsData.length} elements match your filters
             </span>
           </div>
         )}
