@@ -10,6 +10,8 @@ import Footer from "./Components/Footer/Footer";
 import DocsPortal from "./Components/Footer/DocsPortal";
 
 
+import { FlaskConical } from "lucide-react";
+
 function App() {
   const [quizOpen, setQuizOpen] = useState(false);
   const [docsView, setDocsView] = useState({ open: false, type: 'docs' });
@@ -50,9 +52,12 @@ function App() {
               cursor: 'pointer',
               fontFamily: 'Inter, sans-serif',
               transition: 'all 0.2s ease',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px'
             }}
             title="Open Quiz Mode">
-            ⚗️ Quiz Mode
+            <FlaskConical size={18} /> Quiz Mode
           </button>
           <ThemeToggle />
         </div>

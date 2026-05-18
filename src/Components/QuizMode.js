@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useMemo, useRef } from "react";
+import { FlaskConical, Flame, CheckCircle2, XCircle, ArrowRight, X } from "lucide-react";
 import elementsData from "../Data/elementsData";
 import "./QuizMode.css";
 
@@ -621,11 +622,9 @@ const QuizMode = ({ onClose }) => {
     <div className="quiz-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label="Quiz Mode">
       <div className="quiz-modal" onClick={(e) => e.stopPropagation()}>
         <div className="quiz-header">
-          <h2 className="quiz-title">⚗️ Quiz Mode</h2>
+          <h2 className="quiz-title"><FlaskConical size={20} /> Quiz Mode</h2>
           <button className="quiz-close-btn" onClick={onClose} aria-label="Close quiz">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 6 6 18" /><path d="m6 6 12 12" />
-            </svg>
+            <X size={16} strokeWidth={2.5} />
           </button>
         </div>
 
@@ -641,7 +640,7 @@ const QuizMode = ({ onClose }) => {
           </div>
           <div className="quiz-score-item">
             <span className="quiz-score-label">Streak</span>
-            <span className="quiz-score-value quiz-score-streak">🔥 {streak}</span>
+            <span className="quiz-score-value quiz-score-streak"><Flame size={14} fill="currentColor" /> {streak}</span>
           </div>
           <div className="quiz-score-item">
             <span className="quiz-score-label">Progress</span>
@@ -687,7 +686,7 @@ const QuizMode = ({ onClose }) => {
 
         {isAnswered && (
           <div className={`quiz-feedback ${isCorrect ? "feedback-correct" : "feedback-wrong"}`}>
-            {timedOut ? "⏰ Time's up!" : isCorrect ? "✅ Correct!" : `❌ The answer was "${question.correctAnswer}"`}
+            {timedOut ? "⏰ Time's up!" : isCorrect ? <><CheckCircle2 size={16} /> Correct!</> : <><XCircle size={16} /> The answer was "{question.correctAnswer}"</>}
           </div>
         )}
 
@@ -702,13 +701,13 @@ const QuizMode = ({ onClose }) => {
         )} */}
 
         <button
-  className="quiz-next-btn"
-  ref={nextBtnRef}
-  onClick={goNext}
-  disabled={!isAnswered}
->
-  Next Question →
-</button>
+          className="quiz-next-btn"
+          ref={nextBtnRef}
+          onClick={goNext}
+          disabled={!isAnswered}
+        >
+          Next Question <ArrowRight size={18} />
+        </button>
 
         <p className="quiz-hint">
           Tip: Press 1–4 to answer · {settings.mode === "normal" ? "Enter/Space for next" : "Auto-advance on timeout"}
