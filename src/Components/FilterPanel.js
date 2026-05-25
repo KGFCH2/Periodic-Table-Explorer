@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from "react";
-import { Atom, Zap, Wind, Droplet, Sparkles } from "lucide-react";
+import { Atom, Zap, Wind, Droplet, Sparkles, Component, Filter, ChevronDown } from "lucide-react";
 import "./FilterPanel.css";
-import { Atom, Wind, Zap, Sparkles, Component, Filter, ChevronDown } from "lucide-react";
 
 // Classification helpers
 const METAL_CATEGORIES = [
