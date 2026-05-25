@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Beaker } from "lucide-react";
 import PeriodicTable from "./Components/PeriodicTable";
 import Trends from "./Components/Trends/Trends";
 import CompareElements from "./Components/CompareElements";
