@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useEffect, useMemo, useRef } from "react";
-import { FlaskConical, Flame, CheckCircle2, XCircle, ArrowRight, X } from "lucide-react";
-=======
 import React, { useState, useCallback, useEffect, useRef } from "react";
-import { Beaker, Flame, CheckCircle, XCircle } from "lucide-react";
->>>>>>> 9d2165a81e82d91012ba84c395201d8de89d31d2
+import { FlaskConical, Flame, CheckCircle, XCircle, ArrowRight, X } from "lucide-react";
 import elementsData from "../Data/elementsData";
 import "./QuizMode.css";
 
@@ -177,9 +172,6 @@ const QuizMode = ({ onClose }) => {
         {/* Feedback + Next */}
         {isAnswered && (
           <div className={`quiz-feedback ${isCorrect ? "feedback-correct" : "feedback-wrong"}`}>
-<<<<<<< HEAD
-            {timedOut ? "⏰ Time's up!" : isCorrect ? <><CheckCircle2 size={16} /> Correct!</> : <><XCircle size={16} /> The answer was "{question.correctAnswer}"</>}
-=======
             {isCorrect ? (
               <>
                 <CheckCircle size={18} className="feedback-icon" /> Correct!
@@ -189,33 +181,18 @@ const QuizMode = ({ onClose }) => {
                 <XCircle size={18} className="feedback-icon" /> The answer was "{question.correctAnswer}"
               </>
             )}
->>>>>>> 9d2165a81e82d91012ba84c395201d8de89d31d2
           </div>
         )}
 
         <button
-<<<<<<< HEAD
-          className="quiz-next-btn"
-          ref={nextBtnRef}
-          onClick={goNext}
-          disabled={!isAnswered}
-        >
-          Next Question <ArrowRight size={18} />
-        </button>
-
-        <p className="quiz-hint">
-          Tip: Press 1–4 to answer · {settings.mode === "normal" ? "Enter/Space for next" : "Auto-advance on timeout"}
-        </p>
-=======
           ref={nextBtnRef}
           className="quiz-next-btn"
           onClick={handleNext}
           disabled={!isAnswered}
         >
-          Next Question →
+          Next Question <ArrowRight size={18} />
         </button>
         <p className="quiz-hint">Tip: Press 1–4 to answer · Enter / Space for next</p>
->>>>>>> 9d2165a81e82d91012ba84c395201d8de89d31d2
       </div>
     </div>
   );
